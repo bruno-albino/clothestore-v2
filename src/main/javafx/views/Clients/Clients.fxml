@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneClients" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.javafx.views.Clients.ClientsView">
+   <children>
+      <ListView fx:id="lvClients" layoutY="111.0" prefHeight="288.0" prefWidth="800.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Lista de Clientes">
+         <font>
+            <Font name="Century Gothic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btNewClient" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCreateNewClient" prefHeight="42.0" prefWidth="194.0" text="Novo Cliente">
+         <graphic>
+            <FontAwesomeIconView glyphName="USER" size="15" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></Button>
+      <TextField fx:id="txtQuery" layoutX="228.0" layoutY="59.0" onKeyPressed="#handleSearchClients" onKeyTyped="#handleSearchClients" prefHeight="42.0" prefWidth="551.0" promptText="Pesquisar">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></TextField>
+      <Label fx:id="lblSelectClient" layoutX="538.0" layoutY="51.0" text="Duplo clique para selecionar cliente" textAlignment="CENTER" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

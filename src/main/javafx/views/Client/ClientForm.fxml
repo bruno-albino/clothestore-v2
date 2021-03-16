@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="295.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.javafx.views.Client.ClientFormView">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Cadastro de Cliente">
+         <font>
+            <Font name="Century Gothic Bold" size="30.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="14.0" layoutY="50.0" prefHeight="187.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dados Pessoais">
+               <content>
+                  <GridPane hgap="20.0" prefHeight="161.0" prefWidth="670.0" vgap="20.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.39996337890625" minWidth="10.0" prefWidth="206.4" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="592.6000366210938" minWidth="10.0" prefWidth="200.80000000000004" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="592.6000366210938" minWidth="10.0" prefWidth="215.20000000000005" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Label fx:id="lblCPF" text="CPF" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="txtCPF" promptText="XXX.XXX.XXX-XX" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtName" promptText="Nome" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></TextField>
+                        <Label fx:id="lblName" text="Nome" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblSurName" text="Sobrenome" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="txtSurName" promptText="Sobrenome" GridPane.columnIndex="2" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtPhone" promptText="(00) 00000-0000" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></TextField>
+                        <Label layoutX="30.0" layoutY="57.0" text="Telefone" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <Label text="Sexo" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <RadioButton mnemonicParsing="false" selected="true" text="Masculino" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexGroup" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Feminino" toggleGroup="$sexGroup" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></RadioButton>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+          <Tab text="Endereço">
+               <content>
+                  <GridPane alignment="CENTER" hgap="20.0" prefHeight="102.0" prefWidth="778.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.8000244140625" minWidth="100.0" prefWidth="125.0000244140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.8000244140625" minWidth="100.0" prefWidth="208.1999755859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.39993286132812" minWidth="8.999969482421875" prefWidth="173.4000183105469" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.0000305175782" minWidth="10.0" prefWidth="230.99998168945308" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Longadouro" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+                        <Label text="Número" GridPane.columnIndex="2" GridPane.valignment="TOP" />
+                        <TextField fx:id="txtStreet" promptText="Longadouro" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                        <TextField fx:id="txtStreetNumber" prefHeight="26.0" prefWidth="80.0" promptText="0" GridPane.columnIndex="2" GridPane.valignment="BOTTOM" />
+                        <Label layoutX="530.0" layoutY="11.0" text="Cidade" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Label text="CEP" GridPane.valignment="TOP" />
+                        <TextField fx:id="txtZipCode" promptText="XX.XXX-XXX" GridPane.valignment="BOTTOM" />
+                        <Label text="Bairro" GridPane.columnIndex="3" GridPane.valignment="TOP" />
+                        <TextField fx:id="txtNeighborHood" promptText="Bairro" GridPane.columnIndex="3" GridPane.valignment="BOTTOM" />
+                        <Label text="Estado" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <TextField fx:id="txtState" prefHeight="26.0" prefWidth="80.0" promptText="Estado" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <TextField fx:id="txtCity" prefHeight="26.0" prefWidth="80.0" promptText="Cidade" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="20.0" right="20.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnSave" layoutX="538.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="26.0" prefWidth="109.0" text="Salvar">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnCancel" layoutX="422.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="109.0" text="Cancelar">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></Button>
+      <Label layoutX="374.0" layoutY="23.0" text="Tipo de Pessoa:">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></Label>
+      <RadioButton layoutX="494.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleChangeTypeOfPerson" selected="true" text="Física">
+         <toggleGroup>
+            <ToggleGroup fx:id="typeOfPeople" />
+         </toggleGroup>
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="569.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleChangeTypeOfPerson" text="Jurídica" toggleGroup="$typeOfPeople">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></RadioButton>
+   </children>
+</AnchorPane>
